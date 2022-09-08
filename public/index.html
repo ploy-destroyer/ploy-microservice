@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ploy-microservice</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="/app.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <h2>
@@ -13,11 +16,18 @@
 
     <ul>
         <li>
-            whoami <a href='https://ploy-microservice.netlify.app/api/whoami'>https://ploy-microservice.netlify.app/api/whoami</a>
+            whoami <a href='/api/whoami'>/api/whoami</a>
         </li>
         <li>
-            testme <a href='https://ploy-microservice.netlify.app/.netlify/functions/testme'>https://ploy-microservice.netlify.app/.netlify/functions/testme</a>
+            testme <a href='/.netlify/functions/testme'>/.netlify/functions/testme</a>
+        </li>
+        <li>
+            file metadata <a href='/file-metadata-microservice'>/file-metadata-microservice</a>
         </li>
     </ul>
+    <script>
+        const origin = window.location.origin;
+        console.log(origin);
+    </script>
 </body>
 </html>
