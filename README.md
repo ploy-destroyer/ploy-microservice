@@ -1,3 +1,5 @@
-# request-header-parser-microservice
+# ploy-microservice
 
-deploy: https://ploy-microservice.netlify.app/
+(whoami)[https://ploy-microservice.netlify.app/api/whoami]
+
+(testme)[https://ploy-microservice.netlify.app/.netlify/functions/testme]

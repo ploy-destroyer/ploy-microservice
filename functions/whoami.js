@@ -7,7 +7,13 @@ export const handler = async (event, context) => {
 
     let statusCode = 500; //Internal Server Error
     try {
-        ipaddress = event.headers['x-real-ip'];
+        if (event.headers['x-nf-client-connection-ip']) {
+            ipaddress = event.headers['x-nf-client-connection-ip'];
+        } else if (event.headers['x-real-ip']) {
+            ipaddress = event.headers['x-real-ip'];
+        } else {
+            ipaddress = event.headers['x-forwarded-for'].split(',')[0];
+        }
         language = event.headers['accept-language'];
         software = event.headers['user-agent'];
         statusCode = 200;
