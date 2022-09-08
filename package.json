@@ -1,0 +1,15 @@
+{
+  "name": "request-header-parser-microservice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ploy-destroyer/request-header-parser-microservice.git",
+  "author": "ploy-destroyer <ploy_destroyer@protonmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "env-cmd netlify dev"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "netlify-cli": "^11.5.1"
+  }
+}
