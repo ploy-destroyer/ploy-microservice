@@ -9,30 +9,36 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <link href="/app.css" rel="stylesheet" type="text/css">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+    </style>
 </head>
 
 
-<body>
-
-    <div class="container">
+<body class="container">
+    <div class="main">
         <h2>API Project: File Metadata Microservice</h2>
-        <h3>Usage:</h3>
-        <p>
-            Please Upload a File ...
-        </p>
-        <div class="view">
-            <h4 id="output"></h4>
-            <form enctype="multipart/form-data" method="POST" action="/api/fileanalyse">
-                <input id="inputfield" type="file" name="upfile">
-                <input id="button" type="submit" value="Upload">
-            </form>
-        </div>
-    </div>
-    <div class="footer">
-        <p>
-            by
-            <a href="https://www.freecodecamp.org/">freeCodeCamp</a>
-        </p>
+        <form enctype="multipart/form-data" method="POST" action="/api/fileanalyse">
+            <input id="inputfield" type="file" name="upfile">
+            <input id="button" type="submit" value="Upload">
+        </form>
+        <h4 id="output"></h4>
     </div>
 </body>
 
